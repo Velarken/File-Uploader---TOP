@@ -1,0 +1,22 @@
+TODO LIST:
+
+<- AUTH ->
+* implement express-validator for user account info at signup
+* implement bcrypt password hashing for user password at signup
+* 
+
+<- FILE UPLOADING ->
+* implement the multer middleware
+* create account at supabase for file storage
+    * read docs to familiarize with supabase
+* implement file validation with multer's fileFIlter and limits
+    * allow the following file types
+        * PHOTOS - allow jpeg, jpg, png, gif, and webp
+        * VIDEOS - allow mp4, wmv, mov
+        * AUDIO - allow mp3 and wav
+        * DOCUMENT - allow txt, word, and md
+    * restrict all other file types, and provide an error message
+    if user attempts to upload a restricted types
+    * restrict any file that is greater than ___mb in size
+    * if fileName already exists in current folder, ask that the new
+    file be renamed, or remove old file and replace with new
