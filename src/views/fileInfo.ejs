@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <h1>File Preview</h1>
+    <a href="/files"><- Back</a>
+    <div class="file-preview-container">
+        <h2>File Name</h2>
+        <div class="file-info">
+            <p>File Type</p>
+            <p>File Size</p>
+            <p>File Path</p>
+            <p>Upload Date</p>
+        </div>
+        <div class="file-preview">
+            If the file is able to be previewed, the preview will appear here
+        </div>
+    </div>
+</body>
+</html>
