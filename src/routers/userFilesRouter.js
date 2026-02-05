@@ -8,5 +8,8 @@ userFilesRouter.get('/', (req,res) => {
 userFilesRouter.get('/upload', (req, res) => {
     res.render('uploadFile', { pageTitle: 'Upload New File'})
 })
+userFilesRouter.get('/preview', (req,res) => {
+    res.render('fileInfo', { pageTitle: 'Filename - change later'})
+})
 
 export default userFilesRouter;
