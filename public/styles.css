@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(184, 184, 184);
+    display:flex;
+    flex-direction: column;
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+    list-style-type: none;
+    display:flex;
+    width:90vw;
+    justify-content: space-evenly;
+}
+nav a {
+    text-decoration: none;
+    font-size: 2vh;
+    font-weight: 700;
+    color:white;
+}
+a:hover {
+    color:black;
+}
+#signupForm {
+    display:flex;
+    flex-direction: column;
+    width:60vw;
+    align-items: center;
+    justify-content: center;
+}
+#signupForm > * {
+    width:60%;
+    text-align: center;
+    margin:0.5vw;
+    padding:0.25vw;
+}
+.all-files {
+    display:flex;
+    flex-direction: column;
+    width:90vw;
+    height:70vh;
+    border: 3px solid black;
+    border-radius: 8px;
+    align-items: center;
+    padding-top: 1vh;
+}
+.file {
+    display:flex;
+    width:95%;
+    align-items: center;
+    justify-content: space-evenly;
+}
