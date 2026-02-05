@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <h1>Files</h1>
+    <div class="all-files">
+        Folders will show here, when clicked they will accordion open
+        to show the files contained therein.
+        <br><br>
+        For each file, the following is shown:
+        <div class="file">
+            <h3>File Name</h3>
+            <p>File Type</p>
+            <p>File Size</p>
+            <a href="">File Preview</a>
+            <a href="">File Download</a>
+        </div>
+    </div>
+</body>
+</html>
