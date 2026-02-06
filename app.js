@@ -1,4 +1,5 @@
 import express from 'express'
+import morgan from 'morgan'
 import path from 'node:path'
 import 'dotenv/config'
 import 'bcrypt'
@@ -18,7 +19,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.set('views', path.join(__dirname, 'src/views'))
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
 app.use(express.static('public'));
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 
 // sessions
 const prismaStore = new PrismaSessionStore(
@@ -40,6 +43,11 @@ app.use(
 )
 initPassport();
 app.use(passport.session());
+
+app.use(( req, res, next ) => {
+    res.locals.currentUser = req.user;
+    next();
+})
 
 // routes
 app.use('/account', accountRouter)
