@@ -6,11 +6,11 @@ export function renderSignup( req, res ) {
     res.render('signup', { pageTitle: 'Sign Up' })
 }
 export async function userSignup( req, res ) {
-    const {username, firstName, lastName, email, password} = req.body
+    const {username, firstName, lastName, email, password} = await req.body
     try {
         const user = await createNewUser(username, firstName, lastName, email, password);
     } catch (error) {
-        
+        console.error(error)
     }
 }
 
