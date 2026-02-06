@@ -21,7 +21,7 @@ nav a {
 a:hover {
     color:black;
 }
-#signupForm {
+.signupForm {
     display:flex;
     flex-direction: column;
     width:60vw;
