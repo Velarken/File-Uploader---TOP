@@ -19,18 +19,19 @@
   },
   "homepage": "https://github.com/Velarken/File-Uploader---TOP#readme",
   "devDependencies": {
+    "@prisma/adapter-pg": "^7.3.0",
+    "@prisma/client": "^7.3.0",
     "prisma": "^7.3.0"
   },
   "dependencies": {
-    "@prisma/adapter-pg": "^7.3.0",
-    "@prisma/client": "^7.3.0",
     "@quixo3/prisma-session-store": "^3.1.19",
     "bcrypt": "^6.0.0",
-    "dotenv": "^17.2.3",
+    "dotenv": "^17.2.4",
     "ejs": "^4.0.1",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
     "express-validator": "^7.3.1",
+    "morgan": "^1.10.1",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "pg": "^8.18.0"
