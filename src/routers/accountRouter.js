@@ -1,15 +1,11 @@
 import { Router } from 'express'
+import { userLogin, renderAccountSettings, userSignup, renderSignup } from '../controllers/accountController.js';
 
 const accountRouter = Router();
 
-accountRouter.get('/', (req,res) => {
-    res.render('accountSettings', { pageTitle: 'Account Settings' })
-})
-accountRouter.get('/login', (req,res) => {
-    res.render('login', { pageTitle: 'Log In' })
-})
-accountRouter.get('/signup', (req,res) => {
-    res.render('signup', { pageTitle: 'Sign Up' })
-})
+accountRouter.get('/', renderAccountSettings)
+accountRouter.get('/login', userLogin)
+accountRouter.get('/signup', renderSignup)
+accountRouter.post('/signup', userSignup)
 
 export default accountRouter;
