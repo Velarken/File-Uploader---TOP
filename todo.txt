@@ -2,12 +2,12 @@ TODO LIST:
 
 <- AUTH ->
 ** Signup **
-    * implement express-validator for user account info at signup
-        * username form field must be >= 3 and <= 16 
-        * firstName AND lastName form fields must be >=2 and <= 20
-        * email form field must be a vaild email
-        * password AND confirmPassword form fields must be >= 8
-    * implement bcrypt password hashing for user password at signup
+    * XX implement express-validator for user account info at signup XX
+        * XX username form field must be >= 3 and <= 16 XX 
+        * XX firstName AND lastName form fields must be >=2 and <= 20 XX
+        * XX email form field must be a vaild email XX
+        * XX password AND confirmPassword form fields must be >= 8 XX
+    * XX implement bcrypt password hashing for user password at signup XX
 ** Login **
     * check database for matching username
         * if no match found show 'username does not match records'
