@@ -1,9 +1,20 @@
 TODO LIST:
 
 <- AUTH ->
-* implement express-validator for user account info at signup
-* implement bcrypt password hashing for user password at signup
-* 
+** Signup **
+    * implement express-validator for user account info at signup
+        * username form field must be >= 3 and <= 16 
+        * firstName AND lastName form fields must be >=2 and <= 20
+        * email form field must be a vaild email
+        * password AND confirmPassword form fields must be >= 8
+    * implement bcrypt password hashing for user password at signup
+** Login **
+    * check database for matching username
+        * if no match found show 'username does not match records'
+        * if username matches a database entry 
+            * check entered password against un-hashed database password
+    * create passport session for logged in user
+        * add session to sessions table in database
 
 <- FILE UPLOADING ->
 * implement the multer middleware
